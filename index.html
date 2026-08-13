@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Habit Tracker</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1 class="logo">Habit Tracker</h1>
+      <nav class="nav">
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="add-habit-section">
+      <h2>Add a new habit</h2>
+      <form id="add-habit-form" class="add-habit-form">
+        <input
+          type="text"
+          id="habit-name"
+          name="habit-name"
+          placeholder="e.g. Read 20 minutes"
+          required
+        >
+        <button type="submit">Add Habit</button>
+      </form>
+    </section>
+
+    <section class="habits-section">
+      <h2>Your Habits</h2>
+      <div id="habit-list" class="habit-list">
+        <!-- Habit cards render here via JS -->
+        <p id="empty-state" class="empty-state">No habits yet. Add one above to get started.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Habit Tracker</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
