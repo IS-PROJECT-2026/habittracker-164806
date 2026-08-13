@@ -1,0 +1,34 @@
+
+/* --- Add-habit form polish --- */
+.add-habit-form input:focus {
+  outline: 2px solid #4f46e5;
+  outline-offset: 2px;
+}
+
+.add-habit-form button {
+  background: #4f46e5;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  transition: background 0.15s ease;
+}
+
+.add-habit-form button:hover {
+  background: #4338ca;
+}
+
+.add-habit-form input.invalid {
+  outline: 2px solid #dc2626;
+}
+
+.form-error {
+  color: #dc2626;
+  font-size: 0.85rem;
+  margin-top: 0.25rem;
+  display: none;
+}
+
+.form-error.visible {
+  display: block;
+}
