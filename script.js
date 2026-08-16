@@ -35,6 +35,9 @@ function render() {
       <div class="habit-info">
         <span class="habit-name">${habit.name}</span>
       </div>
+      <div class="habit-actions">
+        <button class="delete-btn" data-id="${habit.id}" aria-label="Delete habit">✕</button>
+      </div>
     `;
     habitList.appendChild(card);
   });
@@ -47,6 +50,12 @@ function addHabit(name) {
     name,
     completions: {}
   });
+  saveHabits();
+  render();
+}
+
+function deleteHabit(id) {
+  habits = habits.filter(h => h.id !== id);
   saveHabits();
   render();
 }
@@ -66,6 +75,15 @@ form.addEventListener('submit', (e) => {
   errorEl.classList.remove('visible');
   addHabit(name);
   input.value = '';
+});
+
+habitList.addEventListener('click', (e) => {
+  const id = e.target.dataset.id;
+  if (!id) return;
+
+  if (e.target.classList.contains('delete-btn')) {
+    deleteHabit(id);
+  }
 });
 
 // --- Init ---
