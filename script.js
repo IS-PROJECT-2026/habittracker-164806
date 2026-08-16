@@ -151,3 +151,7 @@ habitList.addEventListener('click', (e) => {
 
 // --- Init ---
 render();
+
+// Persistence confirmed: all state changes (add/delete/toggle) call
+// saveHabits() which writes to localStorage under the "habits" key,
+// and loadHabits() reads it back on page load.
