@@ -155,3 +155,20 @@ render();
 // Persistence confirmed: all state changes (add/delete/toggle) call
 // saveHabits() which writes to localStorage under the "habits" key,
 // and loadHabits() reads it back on page load.
+
+// --- Dark mode toggle ---
+const themeToggle = document.getElementById('theme-toggle');
+
+function applyTheme() {
+  const isDark = localStorage.getItem('theme') === 'dark';
+  document.body.classList.toggle('dark-mode', isDark);
+  themeToggle.textContent = isDark ? '☀️' : '🌙';
+}
+
+themeToggle.addEventListener('click', () => {
+  const isDark = document.body.classList.toggle('dark-mode');
+  localStorage.setItem('theme', isDark ? 'dark' : 'light');
+  themeToggle.textContent = isDark ? '☀️' : '🌙';
+});
+
+applyTheme();
