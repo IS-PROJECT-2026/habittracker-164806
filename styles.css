@@ -108,3 +108,8 @@
   color: #999;
   font-size: 0.9rem;
 }
+
+.dark-mode {
+  background: #1a1a1a;
+  color: #f0f0f0;
+}
