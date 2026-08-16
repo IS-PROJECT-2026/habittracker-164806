@@ -23,6 +23,24 @@ function todayKey() {
   return new Date().toISOString().split('T')[0];
 }
 
+function calculateStreak(habit) {
+  const dates = Object.keys(habit.completions).filter(d => habit.completions[d]).sort();
+  if (dates.length === 0) return 0;
+
+  let streak = 1;
+  for (let i = dates.length - 1; i > 0; i--) {
+    const curr = new Date(dates[i]);
+    const prev = new Date(dates[i - 1]);
+    const diffDays = (curr - prev) / (1000 * 60 * 60 * 24);
+    if (diffDays === 1) {
+      streak++;
+    } else {
+      break;
+    }
+  }
+  return streak;
+}
+
 // --- Rendering ---
 function render() {
   habitList.innerHTML = '';
@@ -38,10 +56,12 @@ function render() {
     card.className = 'habit-card';
 
     const isDoneToday = !!habit.completions[todayKey()];
+    const streak = calculateStreak(habit);
 
     card.innerHTML = `
       <div class="habit-info">
         <span class="habit-name">${habit.name}</span>
+        <span class="habit-streak">🔥 ${streak} day streak</span>
       </div>
       <div class="habit-actions">
         <button class="toggle-btn ${isDoneToday ? 'done' : ''}" data-id="${habit.id}">
