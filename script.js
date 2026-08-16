@@ -41,6 +41,25 @@ function calculateStreak(habit) {
   return streak;
 }
 
+function getLast7Days() {
+  const days = [];
+  for (let i = 6; i >= 0; i--) {
+    const d = new Date();
+    d.setDate(d.getDate() - i);
+    days.push(d.toISOString().split('T')[0]);
+  }
+  return days;
+}
+
+function renderWeekGrid(habit) {
+  const days = getLast7Days();
+  const cells = days.map(day => {
+    const done = !!habit.completions[day];
+    return `<span class="day-cell ${done ? 'filled' : ''}" title="${day}"></span>`;
+  }).join('');
+  return `<div class="week-grid">${cells}</div>`;
+}
+
 // --- Rendering ---
 function render() {
   habitList.innerHTML = '';
@@ -62,6 +81,7 @@ function render() {
       <div class="habit-info">
         <span class="habit-name">${habit.name}</span>
         <span class="habit-streak">🔥 ${streak} day streak</span>
+        ${renderWeekGrid(habit)}
       </div>
       <div class="habit-actions">
         <button class="toggle-btn ${isDoneToday ? 'done' : ''}" data-id="${habit.id}">
