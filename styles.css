@@ -136,3 +136,15 @@
     justify-content: space-between;
   }
 }
+
+/* --- Habit list container --- */
+.habits-section h2 {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.habit-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
