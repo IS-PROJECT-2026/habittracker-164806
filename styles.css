@@ -110,6 +110,9 @@
 }
 
 .dark-mode {
+  background: #121212;
+  color: #e0e0e0;
+  transition: background 0.3s ease;
   background: #1a1a1a;
   color: #f0f0f0;
 }
