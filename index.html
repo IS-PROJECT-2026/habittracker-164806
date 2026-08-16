@@ -3,22 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Habit Tracker</title>
+  <title>Habit Tracker — Kevin Kaniaru</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header class="site-header">
     <div class="container header-inner">
-      <h1 class="logo">Habit Tracker</h1>
+      <div class="brand">
+        <span class="brand-mark">●</span>
+        <h1 class="logo">HABIT<span class="logo-accent">TRACKER</span></h1>
+      </div>
       <nav class="nav">
-        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">NIGHT</button>
       </nav>
     </div>
   </header>
 
   <main class="container">
     <section class="add-habit-section">
-      <h2>Add a new habit</h2>
+      <h2 class="section-label">01 / New Habit</h2>
       <form id="add-habit-form" class="add-habit-form">
         <input
           type="text"
@@ -27,13 +30,13 @@
           placeholder="e.g. Read 20 minutes"
           required
         >
-        <button type="submit">Add Habit</button>
-        <span id="habit-error" class="form-error">Please enter a habit name.</span>
+        <button type="submit">ADD</button>
       </form>
+      <span id="habit-error" class="form-error">Please enter a habit name.</span>
     </section>
 
     <section class="habits-section">
-      <h2>Your Habits</h2>
+      <h2 class="section-label">02 / Tracking</h2>
       <div id="habit-list" class="habit-list">
         <!-- Habit cards render here via JS -->
         <p id="empty-state" class="empty-state">No habits yet. Add one above to get started.</p>
@@ -42,8 +45,9 @@
   </main>
 
   <footer class="site-footer">
-    <div class="container">
-      <p>&copy; 2026 Habit Tracker</p>
+    <div class="container footer-inner">
+      <p class="footer-credit">Built by <strong>Kevin Kaniaru</strong> — Adm. No. 164806</p>
+      <p class="footer-year">&copy; 2026</p>
     </div>
   </footer>
 
