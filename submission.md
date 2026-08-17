@@ -2,159 +2,126 @@
 
 ## 1. Student Details
 
-- **Full Name:** [Your Name Here]
-- **GitHub Username:** [Your Username Here]
-- **Email:** [Your Student Email Here]
+- **Full Name:** Kevin Kaniaru
+- **GitHub Username:** kaniarukevin
+- **Email:** kevin.kaniaru@strathmore.edu
 
 ---
 
 ## 2. Deployed Project Link
 
-- **Live GitHub Pages URL:** [Paste your live deployment link here]
-  *(Example: https://is-project-2026.github.io/hospital-management-138141/)*
+- **Live GitHub Pages URL:** https://is-project-2026.github.io/habittracker-164806/
 
 ---
 
 ## 3. Reflection — Grounded in Your Git History
 
-> **Rules:** Every answer below **must include a direct link** to the specific commit, PR, issue, or branch in your repository that demonstrates what you are describing. Answers without working links will not be graded. Generic explanations that could apply to any project will receive zero marks.
->
-> **Marks:** A (2 marks) · B (1 mark) · C (1 mark) · D (1 mark) = **5 marks total**
-
 ### A. Your Best Commit
 
-Paste the URL of the commit in your history that you think best demonstrates clean conventional commit practice (good type tag, clear subject, meaningful body or footer).
-
-- **Commit URL:** [Paste the full GitHub commit URL here]
-- **Why this one?** [1–2 sentences explaining what makes this commit well-structured]
+- **Commit URL:** https://github.com/IS-PROJECT-2026/habittracker-164806/commit/1e02c8dbcf8e4c2f4c15a93a8d03b6d2d59586b2
+- **Why this one?** It uses a clear `feat` type tag, a concise imperative subject line, and a body that explains exactly what the change does and why, with a footer referencing the issue it closes.
 
 ### B. A Mistake or Struggle
 
-Link to a commit, PR, or issue where something went wrong — a bad commit message you had to fix, a branch you had to delete and recreate, a PR that needed rework, or a deployment that broke. 
-
-- **Link to the evidence:** [Paste URL here]
-- **What happened and how did you recover?** [2–3 sentences]
+- **Link to the evidence:** https://github.com/IS-PROJECT-2026/habittracker-164806/pull/24
+- **What happened and how did you recover?** Two branches independently modified the same CSS block in different ways, causing a merge conflict when the second branch was merged into main. I resolved it by opening GitHub's web conflict editor, reviewing both versions of the block, and keeping the correct one before committing the merge.
 
 ### C. A Pull Request You're Proud Of
 
-Paste the URL of the PR that best shows your self-review process — one where the description is clear, the issue linkage is correct, and the diff tells a coherent story.
-
-- **PR URL:** [Paste the full GitHub PR URL here]
-- **What did you check before merging?** [1–2 sentences on what you reviewed]
+- **PR URL:** https://github.com/IS-PROJECT-2026/habittracker-164806/pull/18
+- **What did you check before merging?** I reviewed the diff on the Files changed tab to confirm the change matched the linked issue's scope, checked that the commit message followed Conventional Commits format, and left a review comment summarizing what I verified before merging.
 
 ### D. One Thing You Would Do Differently
 
-If you had to restart this project from scratch with everything you know now, name one specific workflow decision you would change (not a code change — a Git/project management decision).
-
-- **What would you change?** [1–2 sentences]
-- **Link to the evidence of the original decision:** [Paste URL to the commit, branch, or issue that shows the decision you'd redo]
+- **What would you change?** I'd build the responsive layout into the very first CSS commit instead of bolting it on as a separate media-query pass near the end. Doing it early would have meant styling every new feature — habit cards, the weekly grid, dark mode — against both desktop and mobile from the start, instead of retrofitting breakpoints afterward.
+- **Link to the evidence of the original decision:** https://github.com/IS-PROJECT-2026/habittracker-164806/commit/f343a15368dea54e307602889bf317dcae8556d8
 
 ---
 
 ## 4. Screenshots of Key GitHub Features
 
-Demonstrate your workflow mechanics by embedding your screenshots below.
-
-> **CRITICAL FOR WORKING IMAGES:** Do not type manual folder paths. Edit this file directly on the GitHub web interface, click on the blank line below each prompt, and **paste (Ctrl+V / Cmd+V)** your screenshot. GitHub will automatically upload the file and generate a permanent, working image link for you.
-
 ### A. Milestones and Issues
-*Provide a screenshot showing your active milestone(s) and the granular tracking issues linked directly to them.*
 
-[PASTE YOUR MILESTONE SCREENSHOT DIRECTLY HERE]
+[PASTE SCREENSHOT HERE — go to your repo's Milestones page and screenshot it]
 
-* **Caption:** [Write a brief sentence describing your milestones here]
+* **Caption:** Three milestones — Structure & Layout, Core Functionality, and Polish & Deploy — each with granular issues linked before development began.
 
 ### B. Project Board
-*Provide a screenshot of your GitHub Project Board with your issues organized dynamically across columns (To Do, In Progress, Done).*
 
-[PASTE YOUR PROJECT BOARD SCREENSHOT DIRECTLY HERE]
+[PASTE IMAGE 1 HERE — the board view showing Backlog/Ready/In progress/In review/Done]
 
-* **Caption:** [Write a brief sentence describing your board state here]
+* **Caption:** Kanban board showing issues tracked across columns as work progressed, from Backlog through to Done.
 
 ### C. Branching Architecture
-*Provide a screenshot showing your local or remote Git branch list, highlighting your use of conventional, issue-linked naming patterns (e.g., `feat/`, `fix/`, `style/`).*
 
-[PASTE YOUR BRANCHING SCREENSHOT DIRECTLY HERE]
+[PASTE SCREENSHOT HERE — go to your repo's Branches page and screenshot it]
 
-* **Caption:** [Write a brief sentence describing your branch list here]
+* **Caption:** Branch list showing conventional, issue-linked naming patterns (`feat/`, `style/`, `docs/`, `chore/`, `conflict/`) used throughout development.
 
 ### D. Pull Requests & Traceability
-*Provide a screenshot of a completed or open Pull Request (PR) on GitHub that clearly shows it is linked to a related development issue.*
 
-[PASTE YOUR PULL REQUEST SCREENSHOT DIRECTLY HERE]
+[PASTE SCREENSHOT HERE — open any merged PR, e.g. #18 or #24, and screenshot the sidebar showing "Closes #X"]
 
-* **Caption:** [Write a brief sentence describing your PR and what issue it closes]
+* **Caption:** A merged pull request showing "Closes #" linkage to its corresponding tracked issue.
 
 ---
 
 ## 5. Merge Conflict Evidence
 
-You must engineer **three merge conflicts**, each triggered by a **different cause** from those covered in the lecture. For Conflict 1, document the full resolution lifecycle. For Conflicts 2 and 3, provide the conflict marker screenshot and identify the cause.
-
-> **Marks:** Conflict 1 full chronology (2 marks) · Conflict 2 (1 mark) · Conflict 3 (1 mark) · All three use distinct causes (1 mark) = **5 marks total**
-
----
-
 ### Conflict 1 — Full Chronology
 
-**What cause did you use?** [Name the type of conflict cause from the lecture]
+**What cause did you use?** Same-line edit conflict — two branches independently changed the value of the same CSS property (`padding`) on the same line.
 
 #### Step 1: Generating the Clash
-*Screenshot showing the merge attempt and the conflict warning.*
 
-[PASTE SCREENSHOT OF ATTEMPTED MERGE / TERMINAL WARNING HERE]
+[PASTE IMAGE 10 HERE — terminal showing the padding merge conflict]
 
-* **Caption:** [Describe which two branches collided and the warning received]
+* **Caption:** Merging `conflict/padding-b` into `main` after `conflict/padding-a` had already been merged, both having changed the same `padding` line to different values.
 
 #### Step 2: Inside the Code Editor (Conflict Markers)
-*Screenshot showing the raw, unresolved conflict markers (`<<<<<<< HEAD`, `=======`, `>>>>>>>`) in your editor.*
 
-[PASTE SCREENSHOT OF RAW CONFLICT MARKERS HERE]
+[PASTE IMAGE 9 HERE — VS Code showing padding: 1.5rem vs padding: 2rem with markers]
 
-* **Caption:** [Explain what caused the dispute and your reasoning for the final version]
+* **Caption:** Git could not determine which of the two padding values to keep, so it inserted conflict markers around both versions for manual resolution.
 
 #### Step 3: Resolution & Clean Merge
-*Screenshot of your clean Git history or completed PR showing the conflict was resolved and merged.*
 
-[PASTE SCREENSHOT OF CLEAN RESOLUTION HERE]
+[PASTE SCREENSHOT HERE — go to your commit history, find the padding conflict resolution commit, screenshot the page]
 
-* **Caption:** [Describe the final state after resolution]
+* **Caption:** Resolved by keeping the `1.5rem` value, removing the conflict markers, committing the merge, and pushing to main.
 
 ---
 
 ### Conflict 2 — Different Cause
 
-**What cause did you use?** [Name the type of conflict cause — must be different from Conflict 1]
+**What cause did you use?** Block deletion vs. block modification (modify/delete conflict).
 
-**Why does this cause trigger a conflict?** [1–2 sentences explaining the mechanism]
+**Why does this cause trigger a conflict?** One branch deleted the `.site-footer` CSS rule entirely, while another branch, created from the same starting point, modified properties inside that same rule. Git cannot reconcile "this content no longer exists" with "this content changed," so it flags a conflict for manual resolution.
 
-[PASTE SCREENSHOT OF CONFLICT MARKERS FOR CONFLICT 2 HERE]
+[PASTE IMAGE 6 HERE — the raw HEAD/site-footer/conflict markers]
 
-* **Caption:** [Brief description of the conflicting branches and file]
+* **Caption:** `conflict/footer-delete` removed the `.site-footer` block entirely (empty HEAD side) while `conflict/footer-edit` updated its padding, color, and font size — resolved by keeping the updated block since the HTML still references it.
 
 ---
 
 ### Conflict 3 — Different Cause
 
-**What cause did you use?** [Name the type of conflict cause — must be different from Conflicts 1 and 2]
+**What cause did you use?** Independent same-named addition (add/add conflict).
 
-**Why does this cause trigger a conflict?** [1–2 sentences explaining the mechanism]
+**Why does this cause trigger a conflict?** Two branches, both created from the same point on main, independently added a new CSS rule using the identical selector (`.dark-mode`) but with different property values. Git has no way to know which version should take precedence, so both are presented for manual resolution.
 
-[PASTE SCREENSHOT OF CONFLICT MARKERS FOR CONFLICT 3 HERE]
+[PASTE IMAGE 2 HERE — the .dark-mode conflict markers from the GitHub web editor]
 
-* **Caption:** [Brief description of the conflicting branches and file]
+* **Caption:** `conflict/darkmode-a` and `conflict/darkmode-b` both added a `.dark-mode` rule independently — resolved by combining the preferred background/color values with the transition effect from the second branch.
 
 ---
-##
+
 ## 6. Feedback & Evaluation
 
-To help improve this course for future engineering cohorts, please take 2 minutes to fill out the anonymous feedback form. Your honest review helps shape how this program is taught next semester!
 - [ ] **Anonymous Evaluation Form:** [Course & Instructor Evaluation](https://forms.gle/YLybnsyXXErKEg3s9)
 
 ---
- 
+
 ## Final Submission
- 
-Once your repository is complete, submit your work through the official submission form below. The form will **stop accepting responses after Monday, August 17th, 2026** — no late submissions will be accepted.
- 
+
 > **Submission Form:** [https://forms.gle/KrT4VxtFtkU3wtYu8](https://forms.gle/KrT4VxtFtkU3wtYu8)
