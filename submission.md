@@ -42,25 +42,29 @@
 
 ### A. Milestones and Issues
 
-[PASTE SCREENSHOT HERE — go to your repo's Milestones page and screenshot it]
+<img width="1499" height="741" alt="image" src="https://github.com/user-attachments/assets/08c25989-6560-415f-862f-31e78af85e91" />
+
 
 * **Caption:** Three milestones — Structure & Layout, Core Functionality, and Polish & Deploy — each with granular issues linked before development began.
 
 ### B. Project Board
 
-[PASTE IMAGE 1 HERE — the board view showing Backlog/Ready/In progress/In review/Done]
+<img width="2998" height="1482" alt="image" src="https://github.com/user-attachments/assets/e3dc7244-b489-4f54-9a51-7c4415c0b8ae" />
+
 
 * **Caption:** Kanban board showing issues tracked across columns as work progressed, from Backlog through to Done.
 
 ### C. Branching Architecture
 
-[PASTE SCREENSHOT HERE — go to your repo's Branches page and screenshot it]
+<img width="1499" height="824" alt="image" src="https://github.com/user-attachments/assets/08aa51a5-60cd-49cb-9b8c-62cb07dd21f4" />
+
 
 * **Caption:** Branch list showing conventional, issue-linked naming patterns (`feat/`, `style/`, `docs/`, `chore/`, `conflict/`) used throughout development.
 
 ### D. Pull Requests & Traceability
 
-[PASTE SCREENSHOT HERE — open any merged PR, e.g. #18 or #24, and screenshot the sidebar showing "Closes #X"]
+<img width="1499" height="824" alt="image" src="https://github.com/user-attachments/assets/7f950952-85e0-4faa-8783-3d6202534dbe" />
+
 
 * **Caption:** A merged pull request showing "Closes #" linkage to its corresponding tracked issue.
 
@@ -74,19 +78,22 @@
 
 #### Step 1: Generating the Clash
 
-[PASTE IMAGE 10 HERE — terminal showing the padding merge conflict]
+<img width="2278" height="526" alt="image" src="https://github.com/user-attachments/assets/259d9744-de46-43a2-8e71-cfe9119f7e39" />
+
 
 * **Caption:** Merging `conflict/padding-b` into `main` after `conflict/padding-a` had already been merged, both having changed the same `padding` line to different values.
 
 #### Step 2: Inside the Code Editor (Conflict Markers)
 
-[PASTE IMAGE 9 HERE — VS Code showing padding: 1.5rem vs padding: 2rem with markers]
+<img width="2042" height="1002" alt="image" src="https://github.com/user-attachments/assets/9e12b817-633b-4f4e-a979-e0e48a1a9d76" />
+
 
 * **Caption:** Git could not determine which of the two padding values to keep, so it inserted conflict markers around both versions for manual resolution.
 
 #### Step 3: Resolution & Clean Merge
 
-[PASTE SCREENSHOT HERE — go to your commit history, find the padding conflict resolution commit, screenshot the page]
+<img width="1499" height="824" alt="image" src="https://github.com/user-attachments/assets/66e1e79a-7b9c-4e3a-9225-475a13a72a96" />
+
 
 * **Caption:** Resolved by keeping the `1.5rem` value, removing the conflict markers, committing the merge, and pushing to main.
 
@@ -98,7 +105,8 @@
 
 **Why does this cause trigger a conflict?** One branch deleted the `.site-footer` CSS rule entirely, while another branch, created from the same starting point, modified properties inside that same rule. Git cannot reconcile "this content no longer exists" with "this content changed," so it flags a conflict for manual resolution.
 
-[PASTE IMAGE 6 HERE — the raw HEAD/site-footer/conflict markers]
+<img width="1846" height="290" alt="image" src="https://github.com/user-attachments/assets/1aae0dd0-b73e-46d2-8c65-29a1a6c6c6c7" />
+
 
 * **Caption:** `conflict/footer-delete` removed the `.site-footer` block entirely (empty HEAD side) while `conflict/footer-edit` updated its padding, color, and font size — resolved by keeping the updated block since the HTML still references it.
 
@@ -110,7 +118,8 @@
 
 **Why does this cause trigger a conflict?** Two branches, both created from the same point on main, independently added a new CSS rule using the identical selector (`.dark-mode`) but with different property values. Git has no way to know which version should take precedence, so both are presented for manual resolution.
 
-[PASTE IMAGE 2 HERE — the .dark-mode conflict markers from the GitHub web editor]
+<img width="2998" height="1482" alt="image" src="https://github.com/user-attachments/assets/e532b7e6-2ac0-4afd-a61d-9db8e919348d" />
+
 
 * **Caption:** `conflict/darkmode-a` and `conflict/darkmode-b` both added a `.dark-mode` rule independently — resolved by combining the preferred background/color values with the transition effect from the second branch.
 
